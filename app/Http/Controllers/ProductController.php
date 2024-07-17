@@ -18,5 +18,25 @@ class ProductController extends Controller
         return view('products.create');
     }
 
-    
+    public function store(Request $request) {
+        Product::create($request->all());
+        return redirect()->route('product.index');
+    }
+    public function show(Product $product) {
+        return view('products.show', compact('product'));
+    }
+
+    public function edit(Product $product) {
+        return view('products.edit', compact('product'));
+    }
+
+    public function update(Request $request, Product $product) {
+        $product->update($request->all());
+        return redirect()->route('products.index');
+    }
+
+    public function destory(Product $product) {
+        $product->delete();
+        return redirect()->route('products.index');
+    }
 }
