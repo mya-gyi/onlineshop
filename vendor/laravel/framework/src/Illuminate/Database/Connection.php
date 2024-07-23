@@ -1046,8 +1046,10 @@ class Connection implements ConnectionInterface
             );
         }
 
-        if (! Type::hasType($name)) {
-            Type::addType($name, $class);
+
+
+        if (! \Doctrine\DBAL\Types\Type::hasType($name)) {
+            \Doctrine\DBAL\Types\Type::addType($name, $class);
         }
 
         $this->doctrineTypeMappings[$name] = $type;
