@@ -9,6 +9,9 @@ class HomePageController extends Controller
     //index of HomePage
     public function index()
     {
-        return view('homepage');
+        return view('homepage', [
+            'title' => 'HomePage',
+            'name' => 'HomePage',
+        ]);
     }
 }
