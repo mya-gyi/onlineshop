@@ -6,6 +6,6 @@
 <div class="nav">
     <div class="logo">
         <a href="{{ route('home') }}">Mya.</a>
-
+        <a href="{{ route('login') }}">Login</a>
     </div>
 </div>
