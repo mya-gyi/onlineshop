@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +20,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('products', ProductController::class);
+Route::get('profile', [UserController::class, 'profile'])->name('profile');
+Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::get('admin/users', [AdminController::class, 'users'])->name('admin.users');
+    Route::get('admin/orders', [AdminController::class, 'orders'])->name('admin.orders');
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
