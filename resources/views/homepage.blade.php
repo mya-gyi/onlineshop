@@ -2,10 +2,8 @@
 
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
-<div class="nav">
-    <div class="logo">
-        <a href="{{ route('home') }}">Mya.</a>
-        <a href="{{ route('login') }}">Login</a>
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand"> <p class="text-white">Mya</p><span style="color: yellogreen;">.</span> </a>
     </div>
-</div>
+</nav>
