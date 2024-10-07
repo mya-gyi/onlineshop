@@ -18,4 +18,9 @@ class Shop extends Model
     {
         return $this->belongsTo(City::class, 'city_id');
     }
+
+    public function example()
+    {
+        return "Hello Oppa, Ko Ko yay!!";
+    }
 }
