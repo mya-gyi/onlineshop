@@ -30,8 +30,7 @@
                     <form action="{{ route('product.destory', $product->id) }}" method="POST" style="display: inline-block">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                        <button class="btn btn-success"> <i class="fa fa-plus" aria-hidden="true"></i> Type </button>
+                        <button type="submit" class="btn btn-danger"> <i class="fa fa-trash"></i> Delete</button>
                     </form>
                 </td>
             </tr>
