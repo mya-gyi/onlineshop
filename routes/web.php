@@ -23,7 +23,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 // Auth::routes();
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepage');
 });
 
 Route::resource('products', ProductController::class);

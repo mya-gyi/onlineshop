@@ -2,3 +2,5 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Bootstrap Css  */
+@import "bootstrap/dist/css/bootstrap.min.css";

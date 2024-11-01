@@ -26,7 +26,7 @@
                 <td>{{ $product->stock }}</td>
                 <td>{{ $product->category->name }}</td>
                 <td>
-                    <a href="{{ route('product.edit', $product->id) }}" class="btn btn-primary">Edit</a>
+                    <a href="{{ route('product.edit', $product->id) }}" class="btn btn-primary"> <i class="fa fa-edit" aria-hidden="true"></i> Edit</a>
                     <form action="{{ route('product.destory', $product->id) }}" method="POST" style="display: inline-block">
                         @csrf
                         @method('DELETE')
